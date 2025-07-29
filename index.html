@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benito. Group. Club. (BGC)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            color: #333;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 3px;
+            background-color: #3b82f6; /* Blue underline */
+            border-radius: 9999px;
+        }
+        /* Styles pour les sections cachées/affichées */
+        .content-section {
+            display: none; /* Cache toutes les sections par default */
+        }
+        .content-section.active {
+            display: block; /* Affiche la section active */
+        }
+        .nav-link.active {
+            color: #3b82f6; /* Couleur active pour les liens de navigation */
+            font-weight: 600;
+        }
+        /* Style spécifique pour la section d'accueil sans fond Minecraft */
+        #accueil {
+            background-image: none; /* Supprime l'image de fond */
+            background-color: #3b82f6; /* Couleur de fond unie pour l'accueil */
+            position: relative;
+            overflow: hidden; /* S'assure que le contenu reste dans les limites */
+        }
+        #accueil::before {
+            /* Supprime l'overlay */
+            content: none;
+        }
+        #accueil > div {
+            position: relative;
+            z-index: 2; /* S'assure que le texte est au-dessus de l'overlay */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Banner for old website version -->
+    <div class="bg-yellow-400 text-yellow-900 text-center p-3 font-semibold shadow-md">
+        L'ancienne Version du Site de Benito Group Club :
+        <a href="https://sites.google.com/view/bgcbenitogroupclub974/accueil" target="_blank" class="underline hover:no-underline text-blue-700 hover:text-blue-900">Clique-ici</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg p-4 md:p-6 rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo BGC -->
+            <a href="#" class="rounded-lg p-2 hover:bg-blue-50 transition-colors">
+                <img src="BGC.png" alt="Logo Benito. Group. Club. par Benito.974" class="h-10 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium active" data-target="accueil">Accueil</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="a-propos">À Propos</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="activites">Activités</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="projets">Projets</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="conditions-utilisation">Conditions d'Utilisation</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="contact">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg active" data-target="accueil">Accueil</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="a-propos">À Propos</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="activites">Activités</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="projets">Projets</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="conditions-utilisation">Conditions d'Utilisation</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4">
+        <!-- Hero Section -->
+        <section id="accueil" class="content-section active relative py-20 md:py-32 rounded-b-xl shadow-lg mt-8">
+            <div class="container mx-auto text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
+                    Bienvenue au <span class="text-yellow-300">Benito. Group. Club.</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-white">
+                    BGC (Benito. Group. Club.) a été créé par Benito.974 pour sa communauté YouTube et TikTok, et est également le principal moteur de ses projets comme Zozobra Réunion, FranzMétéo, et d'autres projets à venir.
+                </p>
+                <a href="#" class="nav-link bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105" data-target="a-propos">
+                    En savoir plus
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="a-propos" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 section-title">À Propos de Nous</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="benito saison cyclonique.jpg" alt="Benito.974 et le bus dans un cercle bleu" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2 text-left">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Le Benito. Group. Club. (BGC) est une initiative passionnée fondée par <a href="https://www.youtube.com/@benito.974" target="_blank" class="text-blue-600 hover:underline font-bold">Benito.974</a>, un créateur vidéo bien connu de La Réunion. Fort de son expérience dans la création de contenu engageant, Benito.974 a souhaité étendre sa vision en créant une plateforme dédiée à la croissance personnelle et au partage.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            Notre mission est de fournir des ressources, des événements et un réseau pour aider chacun à réaliser son plein potentiel, que ce soit à travers des ateliers, des discussions ou des projets communs. Inspirés par l'énergie créative de Benito.974, nous encourageons l'innovation et la collaboration au sein de notre communauté.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Benito.974 apporte au BGC sa passion pour la narration visuelle et son expertise en matière de communication, enrichissant ainsi nos activités et nos échanges. Rejoignez-nous pour grandir ensemble !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activites" class="content-section py-16 md:py-24 bg-blue-50 rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 section-title">Nos Activités</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Activity Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.747 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ateliers de Développement</h3>
+                        <p class="text-gray-600">
+                            Sessions interactives sur des compétences variées : leadership, communication, gestion de projet, etc.
+                        </p>
+                    </div>
+                    <!-- Activity Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2m20 0h-2.197m0 0a5.002 5.002 0 00-7.801-2.3A5.002 5.002 0 002 20M12 9a4 4 0 110-8 4 4 0 010 8zm7.81 11A10.003 10.003 0 0012 10a10.003 10.003 0 00-7.81 10"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Rencontres & Réseautage</h3>
+                        <p class="text-gray-600">
+                            Événements réguliers pour échanger des idées, rencontrer de nouvelles personnes et étendre votre réseau.
+                        </p>
+                    </div>
+                    <!-- Activity Card 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5.293a1 1 0 00-.293-.707l-2.5-2.5A1 1 0 0011.293 2H5a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9.75"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Projets Collaboratifs</h3>
+                        <p class="text-gray-600">
+                            Opportunités de travailler sur des projets passionnants en équipe et de mettre en pratique vos compétences.
+                        </p>
+                    </div>
+                    <!-- New Activity Card: Création Vidéo -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-5 5v-5a2 2 0 012-2h2a2 2 0 012 2v5a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Création Vidéo & Contenu</h3>
+                        <p class="text-gray-600">
+                            Apprenez les techniques de création vidéo, du tournage au montage, inspiré par l'expertise de Benito.974.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projets" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 section-title">Nos Projets</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project Card: From the fog -->
+                    <div class="bg-blue-50 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-blue-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">From the fog</h3>
+                        <p class="text-gray-600 mb-4">
+                            Un projet ambitieux et créatif actuellement en cours de développement. Restez à l'écoute pour plus de détails !
+                        </p>
+                        <span class="inline-block bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full">Projet en cours</span>
+                    </div>
+                    <!-- Project Card: Cirque From the Fog -->
+                    <div class="bg-purple-50 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-purple-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cirque From the Fog</h3>
+                        <p class="text-gray-600 mb-4">
+                            Un projet potentiel et non encore confirmé. Nous explorons les possibilités pour cette initiative passionnante.
+                        </p>
+                        <span class="inline-block bg-blue-400 text-blue-900 text-xs font-bold px-3 py-1 rounded-full">Projet non confirmé</span>
+                    </div>
+                    <!-- Project Card: Zozobra réunion -->
+                    <div class="bg-red-50 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-red-600 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Zozobra réunion</h3>
+                        <p class="text-gray-600 mb-4">
+                            Un projet antérieur qui a été définitivement fermé. Il a contribué à notre expérience et notre croissance.
+                        </p>
+                        <span class="inline-block bg-gray-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full">Projet définitivement fermé</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conditions d'Utilisation Section -->
+        <section id="conditions-utilisation" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 section-title">🛡️ Conditions d’utilisation et de mise à jour du site officiel BGC (Benito. Group. Club.)</h2>
+                <p class="text-gray-600 text-sm mb-6">Version 1.0 – Mise à jour le 16 juillet 2025</p>
+
+                <div class="text-left text-gray-700 space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-800">1. Acceptation des conditions</h3>
+                    <p>
+                        L’accès au site BGC implique l’acceptation pleine et entière des présentes conditions.
+                        Tout utilisateur reconnaît avoir lu, compris et accepté ces règles sans réserve.
+                        En cas de non-respect, BGC se réserve le droit de restreindre l’accès à ses contenus ou de bloquer temporairement certaines fonctionnalités.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">2. Propriété du site</h3>
+                    <p>
+                        Le site BGC est conçu et maintenu par Benito.974.
+                        Tous les contenus (textes, visuels, concepts, scripts, projets) sont la propriété exclusive de Benito.974, sauf mention contraire.
+                        Toute reproduction, modification ou diffusion sans autorisation écrite est strictement interdite.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">3. Utilisation du site</h3>
+                    <p>
+                        Le site est accessible sans création de compte.
+                        L’utilisateur peut consulter librement les pages, projets et publications.
+                        Toute tentative de détournement, piratage ou perturbation technique est interdite.
+                        Les commentaires ou propositions envoyées via les formulaires doivent rester respectueux, clairs et pertinents.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">4. Comportement attendu</h3>
+                    <p>
+                        L’utilisateur s’engage à ne pas publier ou relayer de propos haineux, diffamatoires, violents ou discriminatoires.
+                        Toute participation doit viser à enrichir le contenu ou à proposer des idées constructives.
+                        BGC se réserve le droit de supprimer tout message ou contenu jugé inapproprié, sans justification préalable (dans le site ou sur le serveur Discord associé).
+                    </p>
+                    <p>Sur Discord, les membres liés à BGC doivent également respecter les règles de conduite du serveur :</p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>Aucune insulte, provocation ou harcèlement envers les autres membres ou modérateurs</li>
+                        <li>Pas de spam, publicité non autorisée ou contenu inapproprié</li>
+                        <li>Respect des canaux thématiques et des consignes de modération</li>
+                    </ul>
+                    <p>
+                        Toute violation peut entraîner un avertissement, une exclusion temporaire ou définitive du groupe Discord associé à BGC.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">5. Mises à jour du site</h3>
+                    <p>
+                        Le site peut être modifié à tout moment par Benito.974.
+                        Les mises à jour peuvent concerner :
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>L’ajout ou la suppression de projets</li>
+                        <li>La modification de l’apparence ou de la structure du site</li>
+                        <li>L’évolution des présentes conditions</li>
+                    </ul>
+                    <p>
+                        Toute modification sera signalée via une bannière ou une note visible sur la page d’accueil.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">6. Données et confidentialité</h3>
+                    <p>
+                        Aucune donnée personnelle n’est collectée à des fins commerciales.
+                        Les informations transmises via les formulaires (pseudo, message, e-mail) sont utilisées uniquement pour répondre ou améliorer l’expérience utilisateur.
+                        Le site respecte les obligations légales en matière de protection des données.
+                        Une page dédiée à la politique de confidentialité est disponible dans le pied de page.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">7. Fonctionnement sans compte</h3>
+                    <p>
+                        Le site BGC est conçu pour fonctionner sans inscription ni profil utilisateur.
+                        Cette approche garantit une navigation simple, rapide et accessible à tous.
+                        Les contenus sont consultables librement, sans restriction liée à une authentification.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">8. Dissolution des projets antérieurs</h3>
+                    <p>
+                        Les projets FCZR+ et Zozobra Réunion, précédemment associés à l’univers créatif de Benito.974, ont été dissous définitivement.
+                        Cette décision est motivée par des contraintes techniques, météorologiques et organisationnelles.
+                        Ils ne font plus partie des contenus actifs du site BGC.
+                        Toute référence à leur fonctionnement ou à leur organisation est considérée comme historique et ne donne lieu à aucune reprise future.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">9. Droits d’auteur et groupe Discord</h3>
+                    <p>
+                        Tous les contenus diffusés sur le site BGC sont protégés par le droit d’auteur.
+                        Toute utilisation non autorisée, y compris sur des plateformes tierces comme Discord, est interdite.
+                        Les utilisateurs qui partagent des extraits ou des créations BGC sur Discord doivent respecter les règles de propriété intellectuelle.
+                        En cas de signalement ou de violation, BGC se réserve le droit de demander le retrait du contenu via les procédures officielles.
+                        Le groupe Discord associé à BGC, s’il existe, est soumis aux mêmes règles de respect, de modération et de conformité que le site.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800">10. Détournement du site</h3>
+                    <p>
+                        Toute tentative de détournement du site BGC, sous quelque forme que ce soit, est strictement interdite. Cela inclut notamment :
+                    </p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>L’accès frauduleux ou non autorisé à l’administration du site</li>
+                        <li>La modification ou suppression de contenus sans autorisation</li>
+                        <li>L’utilisation du site pour diffuser des messages ou fichiers malveillants</li>
+                        <li>La redirection du trafic vers des plateformes tierces sans accord préalable</li>
+                        <li>L’usurpation de l’identité de Benito.974 ou de BGC dans le but de tromper les visiteurs</li>
+                    </ul>
+                    <p>
+                        Toute action de ce type constitue une infraction grave. BGC se réserve le droit de prendre toutes les mesures nécessaires, y compris le signalement aux autorités compétentes, la collecte de preuves techniques, et le dépôt de plainte conformément aux lois en vigueur.
+                    </p>
+                    <p class="font-bold">
+                        Profitez du site BGC sans devoir créer un compte.
+                        Accédez, lisez, partagez. Rien à remplir, juste à découvrir.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 section-title">Contactez-nous</h2>
+                <div class="max-w-xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-8">
+                        Vous avez des questions ou souhaitez en savoir plus sur le BGC ? N'hésitez pas à nous contacter.
+                    </p>
+                    <form class="space-y-6 mb-4">
+                        <div>
+                            <input type="text" placeholder="Votre Nom" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Votre Email" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        </div>
+                        <div>
+                            <textarea placeholder="Votre Message" rows="6" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gray-400 text-white font-bold py-3 px-8 rounded-full shadow-lg cursor-not-allowed" disabled>
+                            Envoyer le Message
+                        </button>
+                    </form>
+                    <p class="text-sm text-gray-500 mb-8">
+                        Nous avons désactivé l'envoi de messages directs via le site car nous ne pouvons pas gérer un trop grand nombre de mails. Veuillez nous excuser pour le désagrément.
+                    </p>
+                    <div class="mt-8">
+                        <p class="text-lg text-gray-700 mb-4">
+                            Vous préférez nous contacter via Discord ?
+                        </p>
+                        <a href="https://discord.com/invite/nWrDTztDdR" target="_blank" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300 transform hover:scale-105">
+                            L'option Discord clique ici
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-xl shadow-lg">
+        <div class="container mx-auto text-center px-4">
+            <p>&copy; 2025 Benito. Group. Club. Tous droits réservés.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="text-400 hover:text-white transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Function to show a specific section and hide others
+            function showSection(targetId) {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            }
+
+            // Function to update active navigation link
+            function updateActiveNavLink(clickedLink) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                clickedLink.classList.add('active');
+            }
+
+            // Event listeners for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.dataset.target; // Get the target section ID from data-target attribute
+                    showSection(targetId);
+                    updateActiveNavLink(this);
+
+                    // Close mobile menu after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Show the "Accueil" section by default on page load
+            showSection('accueil');
+        });
+    </script>
+</body>
+</html>
