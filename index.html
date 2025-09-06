@@ -222,184 +222,27 @@
             color: #ef4444;
         }
 
-        /* Styles pour le jeu du Cyclone */
-        #cycloneCanvas {
-            background-color: #87CEEB; /* Bleu ciel pour l'océan */
-            border: 2px solid #3b82f6;
-            display: block;
-            margin: 0 auto;
-            cursor: crosshair; /* Curseur de dessin par défaut */
-            touch-action: none;
-        }
-        #cycloneCanvas.drawing {
-            cursor: crosshair; /* Curseur de dessin */
-        }
-        .cyclone-controls {
-            display: flex;
-            flex-wrap: wrap; /* Permet aux boutons de passer à la ligne */
-            justify-content: center;
-            gap: 0.5rem; /* Espacement réduit pour les petits écrans */
-            margin-top: 1rem;
-        }
-        .cyclone-button {
-            padding: 0.75rem 1rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-            background-color: #3b82f6;
-            color: white;
-            font-size: 0.875rem; /* text-sm */
-        }
-        .cyclone-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-            background-color: #2563eb;
-        }
-        .cyclone-button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .cyclone-button.start {
-            background-color: #22c55e;
-        }
-        .cyclone-button.start:hover {
-            background-color: #16a34a;
-        }
-        .cyclone-button.restart {
-            background-color: #ef4444;
-        }
-        .cyclone-button.restart:hover {
-            background-color: #dc2626;
-        }
-        .cyclone-button.disabled {
+        /* Styles pour le formulaire de contact */
+        #contact-form .disabled-button {
             background-color: #9ca3af;
             cursor: not-allowed;
         }
-        .cyclone-info {
-            text-align: center;
-            margin-top: 1rem;
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #4b5563;
-        }
-        .cyclone-message {
-            text-align: center;
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ef4444;
-        }
-        .news-bar {
-            background-color: #fefcbf; /* yellow-100 */
-            border: 1px solid #fcd34d; /* yellow-400 */
-            padding: 0.75rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            text-align: left;
-            color: #78350f; /* yellow-900 */
-            max-height: 150px; /* Limite la hauteur */
-            overflow-y: auto; /* Ajoute un défilement si nécessaire */
-        }
-        /* Styles pour le formulaire de création de cyclone */
-        #cyclone-creation-form-container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: 2rem auto;
-            text-align: left;
-        }
-        #cyclone-creation-form-container input {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #cbd5e0;
-            border-radius: 0.5rem;
-        }
-        #cyclone-creation-form-container button {
-            width: 100%;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-        #cyclone-creation-form-container button.confirm {
-            background-color: #22c55e;
-            color: white;
-        }
-        #cyclone-creation-form-container button.confirm:hover {
-            background-color: #16a34a;
-        }
-        #cyclone-creation-form-container button.cancel {
-            background-color: #ef4444;
-            color: white;
-        }
-        #cyclone-creation-form-container button.cancel:hover {
-            background-color: #dc2626;
-        }
 
-        /* Styles pour le jeu Mini-GTA */
-        #gtaCanvas {
-            background-color: #333; /* Dark road */
-            border: 2px solid #3b82f6;
-            display: block;
-            margin: 0 auto;
-            touch-action: none;
-        }
-        .gta-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .gta-button {
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
+        /* Styles pour la section Notre AI */
+        .ai-link-button {
             background-color: #3b82f6;
             color: white;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
         }
-        .gta-button:hover {
+
+        .ai-link-button:hover {
+            background-color: #2563eb;
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-            background-color: #2563eb;
-        }
-        .gta-button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .gta-button.start {
-            background-color: #22c55e;
-        }
-        .gta-button.start:hover {
-            background-color: #16a34a;
-        }
-        .gta-button.restart {
-            background-color: #ef4444;
-        }
-        .gta-button.restart:hover {
-            background-color: #dc2626;
-        }
-        .gta-info {
-            text-align: center;
-            margin-top: 1rem;
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #4b5563;
-        }
-        .gta-message {
-            text-align: center;
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ef4444;
         }
     </style>
 </head>
@@ -424,9 +267,11 @@
                 <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="activites">Activités</a>
                 <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="projets">Projets</a>
                 <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="jeu-roblox">Jeu Roblox</a>
-                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="mini-jeu">Mini jeu du Groupe</a>
+                <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="mini-jeu">Mini jeu du Groupe</a>
                 <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="conditions-utilisation">Conditions d'Utilisation</a>
                 <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="contact">Contact</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="alerte">Alerte</a>
+                <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="our-ai">Notre AI</a>
             </div>
             <!-- Bouton de menu mobile -->
             <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
@@ -440,9 +285,11 @@
             <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="activites">Activités</a>
             <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="projets">Projets</a>
             <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="jeu-roblox">Jeu Roblox</a>
-            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="mini-jeu">Mini jeu du Groupe</a>
-            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="conditions-utilisation">Conditions d'Utilisation</a>
-            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="contact">Contact</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="mini-jeu">Mini jeu du Groupe</a>
+            <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="conditions-utilisation">Conditions d'Utilisation</a>
+            <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="contact">Contact</a>
+            <a href="#" class="nav-link text-gray-700 hover:text-blue-600 transition-colors font-medium" data-target="alerte">Alerte</a>
+            <a href="#" class="nav-link block text-gray-700 hover:text-blue-600 transition-colors font-medium px-4 py-2 rounded-lg" data-target="our-ai">Notre AI</a>
         </div>
     </nav>
 
@@ -632,8 +479,6 @@
                 <div class="flex justify-center gap-4 mb-8">
                     <button id="show-evitez-blocs-button" class="game-toggle-button game-button bg-blue-500 text-white active">Évitez les Blocs !</button>
                     <button id="show-police-game-button" class="game-toggle-button game-button bg-gray-300 text-gray-700">Jeu Policier</button>
-                    <button id="show-gta-game-button" class="game-toggle-button game-button bg-gray-300 text-gray-700">Mini-GTA</button>
-                    <button id="show-cyclone-game-button" class="game-toggle-button game-button bg-gray-300 text-gray-700 disabled" disabled>Jeu du Cyclone</button>
                 </div>
 
                 <!-- Évitez les Blocs! Game Container -->
@@ -668,64 +513,6 @@
                         Déplacez la souris ou balayez l'écran pour déplacer votre voiture de police.
                     </div>
                 </div>
-
-                <!-- Mini-GTA Game Container -->
-                <div id="mini-gta-game-container" class="game-container max-w-xl mx-auto p-6 border-2 border-purple-500 rounded-xl shadow-lg hidden">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Mini-GTA : Conduite Libre !</h3>
-                    <canvas id="gtaCanvas" width="500" height="400" class="rounded-lg mb-4"></canvas>
-                    <div class="gta-info">
-                        Temps: <span id="gtaTimerDisplay">0</span>s
-                    </div>
-                    <div class="gta-message" id="gtaGameMessage">Appuyez sur Démarrer pour conduire !</div>
-                    <div class="gta-controls">
-                        <button id="gtaStartButton" class="gta-button start">Démarrer</button>
-                        <button id="gtaRestartButton" class="gta-button restart disabled" disabled>Réinitialiser</button>
-                    </div>
-                    <div class="text-sm text-gray-600 mt-4">
-                        Utilisez les flèches directionnelles (ou ZQSD) pour déplacer la voiture.
-                        Sur mobile, utilisez les balayages pour vous déplacer.
-                    </div>
-                </div>
-
-                <!-- Jeu du Cyclone Container -->
-                <div id="cyclone-game-container" class="game-container max-w-xl mx-auto p-6 border-2 border-blue-500 rounded-xl shadow-lg hidden disabled-overlay">
-                    <div class="disabled-message">
-                        Suite à des erreurs, on ne peut plus remettre ce jeu.
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Jeu du Cyclone : Tracez votre chemin !</h3>
-                    <canvas id="cycloneCanvas" width="400" height="400" class="rounded-lg mb-4"></canvas>
-                    <div class="cyclone-info">
-                        Nom: <span id="cycloneNameDisplay">N/A</span> | Catégorie: <span id="cycloneCategoryDisplay">N/A</span> | Score: <span id="cycloneScoreDisplay">0</span> | Temps: <span id="cycloneTimerDisplay">0</span>s
-                    </div>
-                    <div class="cyclone-message" id="cycloneGameMessage">Cliquez sur "Démarrer le Jeu" pour commencer !</div>
-                    <div class="cyclone-controls">
-                        <button id="cycloneStartButton" class="cyclone-button start">Démarrer le Jeu</button>
-                        <button id="cyclonePauseButton" class="cyclone-button disabled" disabled>Pause</button>
-                        <button id="cycloneRestartButton" class="cyclone-button restart disabled" disabled>Réinitialiser le Jeu</button>
-                        <button id="cycloneCreateButton" class="cyclone-button">Créer un Cyclone</button>
-                        <button id="cycloneNameButton" class="cyclone-button disabled" disabled>Nommer le Cyclone</button>
-                        <button id="cycloneTraceButton" class="cyclone-button disabled" disabled>Tracé un Trajectoire</button>
-                        <button id="cycloneSpeed1Button" class="cyclone-button disabled" disabled>Vitesse 1</button>
-                        <button id="cycloneSpeed2Button" class="cyclone-button disabled" disabled>Vitesse 2</button>
-                        <button id="cycloneSpeed3Button" class="cyclone-button disabled" disabled>Vitesse 3</button>
-                        <button id="cycloneCategoryButton" class="cyclone-button disabled" disabled>Changer Catégorie</button>
-                    </div>
-                    <div class="news-bar" id="cycloneNewsBar">
-                        Actualités des Cyclones:
-                    </div>
-                    <div id="cyclone-creation-form-container" class="hidden">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Créer un nouveau Cyclone</h4>
-                        <input type="text" id="new-cyclone-name-input" placeholder="Nom du Cyclone" maxlength="15" required>
-                        <input type="text" id="new-cyclone-origin-input" placeholder="Origine" required>
-                        <input type="text" id="new-cyclone-service-input" placeholder="Service Météo qui l'a nommé" required>
-                        <button id="confirm-create-cyclone-button" class="confirm">Confirmer Création</button>
-                        <button id="cancel-create-cyclone-button" class="cancel">Annuler</button>
-                    </div>
-                    <div class="text-sm text-gray-600 mt-4">
-                        Cliquez sur "Créer un Cyclone" pour ajouter un cyclone sur la carte. Cliquez sur un cyclone pour le sélectionner et utiliser les options de contrôle.
-                        Cliquez et faites glisser sur la carte pour tracer un chemin pour le cyclone sélectionné (si le mode tracé est activé).
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -756,13 +543,6 @@
                         L’utilisateur peut consulter librement les pages, projets et publications.
                         Toute tentative de détournement, piratage ou perturbation technique est interdite.
                         Les commentaires ou propositions envoyées via les formulaires doivent rester respectueux, clairs et pertinents.
-                    </p>
-
-                    <h3 class="text-xl font-semibold text-gray-800">4. Comportement attendu</h3>
-                    <p>
-                        L’utilisateur s’engage à ne pas publier ou relayer de propos haineux, diffamatoires, violents ou discriminatoires.
-                        Toute participation doit viser à enrichir le contenu ou à proposer des idées constructives.
-                        BGC se réserve le droit de supprimer tout message ou contenu jugé inapproprié, sans justification préalable (dans le site ou sur le serveur Discord associé).
                     </p>
                     <p>Sur Discord, les membres liés à BGC doivent également respecter les règles de conduite du serveur :</p>
                     <ul class="list-disc list-inside ml-4">
@@ -843,29 +623,12 @@
         </section>
 
         <!-- Section Contact -->
-        <section id="contact" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+        <section id="contact" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6 active">
             <div class="container mx-auto text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 section-title">Contactez-nous</h2>
                 <div class="max-w-xl mx-auto">
                     <p class="text-lg text-gray-700 mb-8">
-                        Vous avez des questions ou souhaitez en savoir plus sur le BGC ? N'hésitez pas à nous contacter.
-                    </p>
-                    <form class="space-y-6 mb-4">
-                        <div>
-                            <input type="text" placeholder="Votre Nom" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-all">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Votre Email" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-all">
-                        </div>
-                        <div>
-                            <textarea placeholder="Votre Message" rows="6" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-all"></textarea>
-                        </div>
-                        <button type="submit" class="bg-gray-400 text-white font-bold py-3 px-8 rounded-full shadow-lg cursor-not-allowed" disabled>
-                            Envoyer le Message
-                        </button>
-                    </form>
-                    <p class="text-sm text-gray-500 mb-8">
-                        Nous avons désactivé l'envoi de messages directs via le site car nous ne pouvons pas gérer un trop grand nombre de mails. Veuillez nous excuser pour le désagrément.
+                        Si sa ne fonctionne pas écrivez directement à <a href="mailto:benito974@bgc974.fr" class="text-blue-600 hover:underline">benito974@bgc974.fr</a> ou contactez-nous via Discord.
                     </p>
                     <div class="mt-8">
                         <p class="text-lg text-gray-700 mb-4">
@@ -876,6 +639,33 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Section Alerte -->
+        <section id="alerte" class="content-section py-16 md:py-24 bg-red-50 rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-red-600 mb-8 section-title">⚠️ Avis important pour la communauté BGC ⚠️</h2>
+                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    Nous tenons à vous informer que l'ancienne version du site BGC sera fermée et supprimée dès que la construction de notre nouveau site est terminée. Toute l'équipe sera transférée sur cette nouvelle plateforme.
+                </p>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Nous vous remercions pour votre compréhension et nous avons hâte de vous retrouver sur le nouveau site !
+                </p>
+                <p id="alerte-date" class="text-sm text-gray-500"></p>
+            </div>
+        </section>
+
+        <!-- Section Notre AI -->
+        <section id="our-ai" class="content-section py-16 md:py-24 bg-white rounded-xl shadow-md mx-4 md:mx-auto my-8 max-w-6xl px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 section-title">Notre AI</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Découvrez NeoBGC V1, notre intelligence artificielle conçue pour interagir avec la communauté et assister dans divers projets.
+                </p>
+                <a href="https://chatgpt.com/g/g-68b888e31f3081919d386153d86dcbd6-neobgc" target="_blank" class="ai-link-button">
+                    NeoBGC V1
+                </a>
             </div>
         </section>
     </main>
@@ -927,7 +717,7 @@
             const policeGameContainer = document.getElementById('police-game-container');
             const showPoliceGameButton = document.getElementById('show-police-game-button');
 
-            let policePlayer = { x: 0, y: 0, width: 20, height: 30, color: 'blue', speed: 5 }; // Vitesse augmentée pour le policier
+            let policePlayer = { x: 0, y: 0, width: 20, height: 30, color: 'blue', speed: 5 }; // Vitesse augmentée pour le criminel
             let criminal = { x: 0, y: 0, width: 20, height: 30, color: 'red', speed: 3 }; // Vitesse augmentée pour le criminel
             let policeObstacles = []; // Tableau pour les obstacles du jeu policier
             let policeScore = 0;
@@ -941,89 +731,14 @@
             const roadLineGap = 20; // Espacement entre les segments de ligne
             const roadScrollSpeed = 5; // Vitesse de défilement de la route
 
-            // Éléments du jeu du Cyclone
-            const cycloneCanvas = document.getElementById('cycloneCanvas');
-            const cycloneCtx = cycloneCanvas.getContext('2d');
-            const cycloneStartButton = document.getElementById('cycloneStartButton');
-            const cycloneRestartButton = document.getElementById('cycloneRestartButton');
-            const cycloneCreateButton = document.getElementById('cycloneCreateButton');
-            const cycloneNameButton = document.getElementById('cycloneNameButton');
-            const cycloneTraceButton = document.getElementById('cycloneTraceButton');
-            const cycloneSpeed1Button = document.getElementById('cycloneSpeed1Button');
-            const cycloneSpeed2Button = document.getElementById('cycloneSpeed2Button');
-            const cycloneSpeed3Button = document.getElementById('cycloneSpeed3Button');
-            const cycloneCategoryButton = document.getElementById('cycloneCategoryButton');
-            const cycloneNameDisplay = document.getElementById('cycloneNameDisplay');
-            const cycloneCategoryDisplay = document.getElementById('cycloneCategoryDisplay');
-            const cycloneScoreDisplay = document.getElementById('cycloneScoreDisplay');
-            const cycloneTimerDisplay = document.getElementById('cycloneTimerDisplay');
-            const cycloneGameMessage = document.getElementById('cycloneGameMessage');
-            const cycloneGameContainer = document.getElementById('cyclone-game-container');
-            const showCycloneGameButton = document.getElementById('show-cyclone-game-button');
-            const cycloneNewsBar = document.getElementById('cycloneNewsBar');
-            const cyclonePauseButton = document.getElementById('cyclonePauseButton'); // Nouveau bouton Pause
-
-            const cycloneCreationFormContainer = document.getElementById('cyclone-creation-form-container');
-            const newCycloneNameInput = document.getElementById('new-cyclone-name-input');
-            const newCycloneOriginInput = document.getElementById('new-cyclone-origin-input');
-            const newCycloneServiceInput = document.getElementById('new-cyclone-service-input');
-            const confirmCreateCycloneButton = document.getElementById('confirm-create-cyclone-button');
-            const cancelCreateCycloneButton = document.getElementById('cancel-create-cyclone-button');
-
-            let cyclones = []; // Tableau pour stocker plusieurs cyclones
-            let selectedCyclone = null; // Le cyclone actuellement sélectionné pour les actions
-            
-            // isTracing est une propriété de chaque cyclone, pas une variable globale ici
-            let isCycloneGameRunning = false;
-            let cycloneGameInterval;
-            let cycloneTimerInterval;
-            let cycloneCategoryIndex = 0;
-            let cycloneScore = 0; // Déclaration globale
-            let cycloneTimer = 0; // Déclaration globale
-
-            // Object to track pressed keys for the selected cyclone
-            let cycloneKeysPressed = {}; // Déclaration unique ici
-
-            const cycloneCategories = ['ZT', 'DT', 'FT', 'CT', 'CTTI']; // Zone de Tempête à Cyclone Tropical Très Intense
-            const categoryColors = {
-                'ZT': 'rgba(0, 255, 0, 0.7)',   // Vert
-                'DT': 'rgba(255, 255, 0, 0.7)', // Jaune
-                'FT': 'rgba(255, 165, 0, 0.7)', // Orange
-                'CT': 'rgba(255, 0, 0, 0.7)',   // Rouge
-                'CTTI': 'rgba(128, 0, 128, 0.7)' // Violet
-            };
-            const categoryRadius = {
-                'ZT': 10,
-                'DT': 15,
-                'FT': 20,
-                'CT': 25,
-                'CTTI': 30
-            };
-
-            const indianOceanIslands = [
-                { name: 'Madagascar', x: 100, y: 200, radius: 15, color: '#008000', situation: 'Calme' },
-                { name: 'La Réunion', x: 300, y: 300, radius: 5, color: '#FF4500', situation: 'Calme' },
-                { name: 'Maurice', x: 320, y: 290, radius: 4, color: '#FFD700', situation: 'Calme' },
-                { name: 'Comores', x: 180, y: 150, radius: 3, color: '#800080', situation: 'Calme' },
-                { name: 'Seychelles', x: 250, y: 80, radius: 4, color: '#00CED1', situation: 'Calme' },
-                { name: 'Maldives', x: 150, y: 50, radius: 3, color: '#DAA520', situation: 'Calme' },
-                { name: 'Sri Lanka', x: 350, y: 30, radius: 6, color: '#A52A2A', situation: 'Calme' }
-            ];
 
             // --- Fonctions communes de gestion des sections et des jeux ---
-
-            // Fonction pour arrêter toutes les boucles de jeu
             function stopAllGames() {
                 if (evitezBlocsGameInterval) cancelAnimationFrame(evitezBlocsGameInterval);
                 if (evitezBlocsObstacleInterval) clearInterval(evitezBlocsObstacleInterval);
                 if (policeGameIntervalId) cancelAnimationFrame(policeGameIntervalId);
                 if (policeTimerIntervalId) clearInterval(policeTimerIntervalId);
-                if (policeObstacleIntervalId) clearInterval(policeObstacleIntervalId); // Arrête la génération d'obstacles
-                if (cycloneGameInterval) cancelAnimationFrame(cycloneGameInterval);
-                if (cycloneTimerInterval) clearInterval(cycloneTimerInterval);
-                // Arrête le jeu GTA
-                if (gtaGameIntervalId) cancelAnimationFrame(gtaGameIntervalId);
-                if (gtaTimerIntervalId) clearInterval(gtaTimerIntervalId);
+                if (policeObstacleIntervalId) clearInterval(policeObstacleIntervalId);
             }
 
             // Fonction pour basculer entre les jeux
@@ -1046,14 +761,12 @@
                 const clickedButton = document.getElementById(`show-${gameToShowId.replace('-game-container', '')}-button`);
 
                 if (targetContainer) {
-                    // Si le conteneur cible est désactivé (comme Jeu du Cyclone), ne pas l'activer
                     if (targetContainer.classList.contains('disabled-overlay')) {
-                        // Mettre à jour le style du bouton pour montrer qu'il est désactivé
                         if (clickedButton) {
                             clickedButton.classList.add('disabled');
                             clickedButton.disabled = true;
                         }
-                        return; // Ne pas activer le jeu
+                        return;
                     }
 
                     targetContainer.classList.remove('hidden');
@@ -1064,9 +777,8 @@
                     }
 
                     if (gameToShowId === 'evitez-blocs-game-container') {
-                        resizeGameCanvas(gameCanvas, gameCtx, 300, 400); // Réinitialise la taille du canvas du jeu d'évitement
-                        // Réinitialise l'état du jeu Évitez les Blocs !
-                        isGameOver = true; // Pour s'assurer que le jeu est à l'état initial
+                        resizeGameCanvas(gameCanvas, gameCtx, 300, 400);
+                        isGameOver = true;
                         gameMessage.textContent = 'Cliquez sur Démarrer pour jouer !';
                         startButton.classList.remove('disabled');
                         startButton.disabled = false;
@@ -1074,19 +786,14 @@
                         restartButton.disabled = true;
                         scoreDisplay.textContent = '0';
                         obstacles = [];
-                        drawEvitezBlocsWorld(); // Redessine un monde vide
+                        drawEvitezBlocsWorld();
                     } else if (gameToShowId === 'police-game-container') {
                         resizeGameCanvas(policeCanvas, policeCtx, 400, 300);
                         initPoliceGame();
-                    } else if (gameToShowId === 'mini-gta-game-container') {
-                        resizeGameCanvas(gtaCanvas, gtaCtx, 500, 400);
-                        initGtaGame();
-                    } else if (gameToShowId === 'cyclone-game-container') {
-                        resizeGameCanvas(cycloneCanvas, cycloneCtx, 400, 400);
-                        initCycloneGame();
                     }
                 }
             }
+
 
             // Gère le redimensionnement d'un canvas spécifique
             function resizeGameCanvas(canvasElement, context, defaultWidth, defaultHeight) {
@@ -1097,14 +804,13 @@
                 let newWidth = maxWidth;
                 let newHeight = newWidth / aspectRatio;
 
-                if (newHeight > defaultHeight) { // Limite la hauteur maximale
+                if (newHeight > defaultHeight) {
                     newHeight = defaultHeight;
                     newWidth = newHeight * aspectRatio;
                 }
 
                 canvasElement.width = newWidth;
                 canvasElement.height = newHeight;
-                // Si le contexte a des transformations, il faut les réinitialiser après un redimensionnement
                 context.setTransform(1, 0, 0, 1, 0, 0);
             }
 
@@ -1159,21 +865,16 @@
 
             function evitezBlocsGameLoop() {
                 if (isGameOver) return;
-
                 gameCtx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-
                 drawPlayer();
                 updateObstacles();
                 drawObstacles();
-
                 if (detectCollision()) {
                     endEvitezBlocsGame();
                     return;
                 }
-
                 score++;
                 scoreDisplay.textContent = score;
-
                 evitezBlocsGameInterval = requestAnimationFrame(evitezBlocsGameLoop);
             }
 
@@ -1188,14 +889,12 @@
                 startButton.disabled = true;
                 restartButton.classList.remove('disabled');
                 restartButton.disabled = false;
-
                 evitezBlocsObstacleInterval = setInterval(() => {
                     generateObstacle();
                     if (score > 1000 && gameSpeed < 1.5) gameSpeed = 1.5;
                     if (score > 3000 && gameSpeed < 2) gameSpeed = 2;
                     if (score > 6000 && gameSpeed < 2.5) gameSpeed = 2.5;
                 }, 500);
-
                 evitezBlocsGameInterval = requestAnimationFrame(evitezBlocsGameLoop);
             }
 
@@ -1208,7 +907,6 @@
                 startButton.disabled = false;
             }
 
-            // Contrôles du joueur (clavier) pour Évitez les Blocs !
             document.addEventListener('keydown', (e) => {
                 if (evitezBlocsGameContainer.classList.contains('active') && !isGameOver) {
                     if (e.key === 'ArrowLeft' || e.key === 'q') {
@@ -1219,7 +917,6 @@
                 }
             });
 
-            // Contrôles tactiles (balayage) pour Évitez les Blocs !
             let touchStartX = 0;
             gameCanvas.addEventListener('touchstart', (e) => {
                 if (evitezBlocsGameContainer.classList.contains('active') && !isGameOver) {
@@ -1236,7 +933,6 @@
                 }
             });
 
-            // Écouteurs de boutons pour Évitez les Blocs !
             if (startButton) startButton.addEventListener('click', startEvitezBlocsGame);
             if (restartButton) restartButton.addEventListener('click', startEvitezBlocsGame);
 
@@ -1247,11 +943,11 @@
                 policePlayer.x = policeCanvas.width / 2 - policePlayer.width / 2;
                 policePlayer.y = policeCanvas.height - policePlayer.height - 10;
                 criminal.x = Math.random() * (policeCanvas.width - criminal.width);
-                criminal.y = Math.random() * (policeCanvas.height / 2); // Criminel dans la moitié supérieure
-                policeObstacles = []; // Réinitialise les obstacles
+                criminal.y = Math.random() * (policeCanvas.height / 2);
+                policeObstacles = [];
                 policeScore = 0;
                 policeTimer = 0;
-                roadScrollY = 0; // Réinitialise le défilement de la route
+                roadScrollY = 0;
                 policeScoreDisplay.textContent = policeScore;
                 policeTimerDisplay.textContent = policeTimer;
                 policeGameMessage.textContent = 'Attrapez les criminels !';
@@ -1265,27 +961,18 @@
 
             function drawPoliceWorld() {
                 policeCtx.clearRect(0, 0, policeCanvas.width, policeCanvas.height);
-                // Dessiner la route (fond)
-                policeCtx.fillStyle = '#696969'; // Gris foncé pour la route
+                policeCtx.fillStyle = '#696969';
                 policeCtx.fillRect(0, 0, policeCanvas.width, policeCanvas.height);
-
-                // Dessiner les lignes de la route (défilement)
-                policeCtx.fillStyle = '#FFFFFF'; // Blanc
+                policeCtx.fillStyle = '#FFFFFF';
                 for (let i = 0; i < policeCanvas.height / (roadLineHeight + roadLineGap); i++) {
                     let y = (i * (roadLineHeight + roadLineGap) + roadScrollY) % (policeCanvas.height + roadLineHeight + roadLineGap);
-                    if (y < 0) y += (policeCanvas.height + roadLineHeight + roadLineGap); // Gère le défilement négatif
-                    policeCtx.fillRect(policeCanvas.width / 2 - 2, y, 4, roadLineHeight); // Ligne centrale
+                    if (y < 0) y += (policeCanvas.height + roadLineHeight + roadLineGap);
+                    policeCtx.fillRect(policeCanvas.width / 2 - 2, y, 4, roadLineHeight);
                 }
-
-                // Dessiner la voiture de police
                 policeCtx.fillStyle = policePlayer.color;
                 policeCtx.fillRect(policePlayer.x, policePlayer.y, policePlayer.width, policePlayer.height);
-
-                // Dessiner la voiture du criminel
                 policeCtx.fillStyle = criminal.color;
                 policeCtx.fillRect(criminal.x, criminal.y, criminal.width, criminal.height);
-
-                // Dessiner les obstacles
                 policeObstacles.forEach(obstacle => {
                     policeCtx.fillStyle = obstacle.color;
                     policeCtx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
@@ -1293,80 +980,62 @@
             }
 
             function updatePoliceGame() {
-                // Mouvement du criminel (s'enfuit du policier)
                 let dx = policePlayer.x - criminal.x;
                 let dy = policePlayer.y - criminal.y;
                 let distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < 150) { // Si le policier est trop proche, le criminel s'enfuit
-                    if (dx < 0) criminal.x += criminal.speed; // Policier à droite, criminel va à droite
-                    if (dx > 0) criminal.x -= criminal.speed; // Policier à gauche, criminel va à gauche
-                    if (dy < 0) criminal.y += criminal.speed; // Policier en bas, criminel va en bas
-                    if (dy > 0) criminal.y -= criminal.speed; // Policier en haut, criminel va en haut
+                if (distance < 150) {
+                    if (dx < 0) criminal.x += criminal.speed;
+                    if (dx > 0) criminal.x -= criminal.speed;
+                    if (dy < 0) criminal.y += criminal.speed;
+                    if (dy > 0) criminal.y -= criminal.speed;
                 } else {
-                    // Si le policier est loin, le criminel se déplace aléatoirement ou lentement
                     criminal.x += (Math.random() - 0.5) * criminal.speed * 0.5;
                     criminal.y += (Math.random() - 0.5) * criminal.speed * 0.5;
                 }
-
-                // Empêcher le criminel de sortir des limites
                 criminal.x = Math.max(0, Math.min(policeCanvas.width - criminal.width, criminal.x));
                 criminal.y = Math.max(0, Math.min(policeCanvas.height - criminal.height, criminal.y));
-
-                // Défilement de la route
                 roadScrollY = (roadScrollY + roadScrollSpeed) % (roadLineHeight + roadLineGap);
-
-                // Mise à jour des obstacles
                 policeObstacles.forEach(obstacle => {
                     obstacle.y += obstacle.speed;
                 });
-                policeObstacles = policeObstacles.filter(obstacle => obstacle.y < policeCanvas.height); // Supprime les obstacles hors écran
-
-                // Détection de capture (le policier touche le criminel)
+                policeObstacles = policeObstacles.filter(obstacle => obstacle.y < policeCanvas.height);
                 if (policePlayer.x < criminal.x + criminal.width &&
                     policePlayer.x + policePlayer.width > criminal.x &&
                     policePlayer.y < criminal.y + criminal.height &&
                     policePlayer.y + policePlayer.height > criminal.y) {
                     policeScore++;
                     policeScoreDisplay.textContent = policeScore;
-                    // Replacer le criminel à une nouvelle position aléatoire loin du joueur
                     criminal.x = Math.random() * (policeCanvas.width - criminal.width);
                     criminal.y = Math.random() * (policeCanvas.height - criminal.height);
-                    // S'assurer que le criminel réapparaît loin du joueur
                     while (Math.abs(policePlayer.x - criminal.x) < 100 || Math.abs(policePlayer.y - criminal.y) < 100) {
                         criminal.x = Math.random() * (policeCanvas.width - criminal.width);
                         criminal.y = Math.random() * (policeCanvas.height - criminal.height);
                     }
                 }
-
-                // Détection de collision avec les obstacles
                 for (let i = 0; i < policeObstacles.length; i++) {
                     const obs = policeObstacles[i];
                     if (policePlayer.x < obs.x + obs.width &&
                         policePlayer.x + policePlayer.width > obs.x &&
                         policePlayer.y < obs.y + obs.height &&
                         policePlayer.y + policePlayer.height > obs.y) {
-                        endPoliceGame(); // Collision avec un obstacle
+                        endPoliceGame();
                         return;
                     }
                 }
             }
 
-            // Génère un nouvel obstacle pour le jeu policier
             function generatePoliceObstacle() {
-                const size = Math.random() * 30 + 20; // Taille aléatoire entre 20 et 50
+                const size = Math.random() * 30 + 20;
                 const x = Math.random() * (policeCanvas.width - size);
-                const speed = roadScrollSpeed + Math.random() * 1; // Vitesse légèrement supérieure à celle de la route
-                policeObstacles.push({ x: x, y: -size, width: size, height: size, color: '#333333', speed: speed }); // Obstacles gris foncé
+                const speed = roadScrollSpeed + Math.random() * 1;
+                policeObstacles.push({ x: x, y: -size, width: size, height: size, color: '#333333', speed: speed });
             }
 
             function policeGameLoop() {
                 if (!isPoliceGameRunning) return;
-
                 policeCtx.clearRect(0, 0, policeCanvas.width, policeCanvas.height);
                 drawPoliceWorld();
                 updatePoliceGame();
-
                 policeGameIntervalId = requestAnimationFrame(policeGameLoop);
             }
 
@@ -1375,53 +1044,44 @@
                 isPoliceGameRunning = true;
                 policeScore = 0;
                 policeTimer = 0;
-                policeObstacles = []; // Assurez-vous que les obstacles sont vides au début
-                roadScrollY = 0; // Réinitialise le défilement de la route
+                policeObstacles = [];
+                roadScrollY = 0;
                 policeScoreDisplay.textContent = policeScore;
                 policeTimerDisplay.textContent = policeTimer;
                 policeGameMessage.textContent = '';
-
                 policeStartButton.classList.add('disabled');
                 policeStartButton.disabled = true;
                 policeRestartButton.classList.remove('disabled');
                 policeRestartButton.disabled = false;
-
-                // Réinitialiser les positions
                 policePlayer.x = policeCanvas.width / 2 - policePlayer.width / 2;
                 policePlayer.y = policeCanvas.height - policePlayer.height - 10;
                 criminal.x = Math.random() * (policeCanvas.width - criminal.width);
                 criminal.y = Math.random() * (policeCanvas.height / 2);
-
                 policeGameIntervalId = requestAnimationFrame(policeGameLoop);
                 policeTimerIntervalId = setInterval(() => {
                     policeTimer++;
                     policeTimerDisplay.textContent = policeTimer;
                 }, 1000);
-                // Commence à générer des obstacles
-                policeObstacleIntervalId = setInterval(generatePoliceObstacle, 1500); // Génère un obstacle toutes les 1.5 secondes
+                policeObstacleIntervalId = setInterval(generatePoliceObstacle, 1500);
             }
 
             function endPoliceGame() {
                 isPoliceGameRunning = false;
                 cancelAnimationFrame(policeGameIntervalId);
                 clearInterval(policeTimerIntervalId);
-                clearInterval(policeObstacleIntervalId); // Arrête la génération d'obstacles
+                clearInterval(policeObstacleIntervalId);
                 policeGameMessage.textContent = `Partie terminée ! Criminels attrapés: ${policeScore}`;
                 policeStartButton.classList.remove('disabled');
                 policeStartButton.disabled = false;
             }
 
-            // Contrôles du joueur (souris/tactile) pour le jeu Policier
             policeCanvas.addEventListener('mousemove', (e) => {
                 if (policeGameContainer.classList.contains('active') && isPoliceGameRunning) {
                     const rect = policeCanvas.getBoundingClientRect();
                     const scaleX = policeCanvas.width / rect.width;
                     const scaleY = policeCanvas.height / rect.height;
-
                     policePlayer.x = (e.clientX - rect.left) * scaleX - policePlayer.width / 2;
                     policePlayer.y = (e.clientY - rect.top) * scaleY - policePlayer.height / 2;
-
-                    // Limiter la position du joueur aux bords du canvas
                     policePlayer.x = Math.max(0, Math.min(policeCanvas.width - policePlayer.width, policePlayer.x));
                     policePlayer.y = Math.max(0, Math.min(policeCanvas.height - policePlayer.height, policePlayer.y));
                 }
@@ -1429,214 +1089,40 @@
 
             policeCanvas.addEventListener('touchmove', (e) => {
                 if (policeGameContainer.classList.contains('active') && isPoliceGameRunning) {
-                    e.preventDefault(); // Empêche le défilement de la page
+                    e.preventDefault();
                     const rect = policeCanvas.getBoundingClientRect();
                     const scaleX = policeCanvas.width / rect.width;
                     const scaleY = policeCanvas.height / rect.height;
-
                     policePlayer.x = (e.touches[0].clientX - rect.left) * scaleX - policePlayer.width / 2;
                     policePlayer.y = (e.touches[0].clientY - rect.top) * scaleY - policePlayer.height / 2;
-
-                    // Limiter la position du joueur aux bords du canvas
                     policePlayer.x = Math.max(0, Math.min(policeCanvas.width - policePlayer.width, policePlayer.x));
                     policePlayer.y = Math.max(0, Math.min(policeCanvas.height - policePlayer.height, policePlayer.y));
                 }
             });
 
-
-            // Écouteurs de boutons pour le jeu Policier
             if (policeStartButton) policeStartButton.addEventListener('click', startPoliceGame);
             if (policeRestartButton) policeRestartButton.addEventListener('click', startPoliceGame);
 
-
-            // --- Logique du jeu Mini-GTA ---
-            const gtaCanvas = document.getElementById('gtaCanvas');
-            const gtaCtx = gtaCanvas.getContext('2d');
-            const gtaStartButton = document.getElementById('gtaStartButton');
-            const gtaRestartButton = document.getElementById('gtaRestartButton');
-            const gtaTimerDisplay = document.getElementById('gtaTimerDisplay');
-            const gtaGameMessage = document.getElementById('gtaGameMessage');
-            const miniGtaGameContainer = document.getElementById('mini-gta-game-container');
-
-            let gtaPlayer = { x: 0, y: 0, width: 20, height: 40, color: '#008000', speed: 3, vx: 0, vy: 0 };
-            let gtaBuildings = [];
-            let gtaTimer = 0;
-            let isGtaGameRunning = false;
-            let gtaGameIntervalId;
-            let gtaTimerIntervalId;
-            let gtaKeysPressed = {};
-
-            function initGtaGame() {
-                gtaPlayer.x = gtaCanvas.width / 2 - gtaPlayer.width / 2;
-                gtaPlayer.y = gtaCanvas.height / 2 - gtaPlayer.height / 2;
-                gtaPlayer.vx = 0;
-                gtaPlayer.vy = 0;
-                gtaBuildings = [];
-                gtaTimer = 0;
-                isGtaGameRunning = false;
-                gtaTimerDisplay.textContent = gtaTimer;
-                gtaGameMessage.textContent = 'Appuyez sur Démarrer pour conduire !';
-                gtaStartButton.classList.remove('disabled');
-                gtaStartButton.disabled = false;
-                gtaRestartButton.classList.add('disabled');
-                gtaRestartButton.disabled = true;
-
-                // Générer quelques bâtiments aléatoires
-                for (let i = 0; i < 10; i++) {
-                    gtaBuildings.push({
-                        x: Math.random() * (gtaCanvas.width - 50),
-                        y: Math.random() * (gtaCanvas.height - 50),
-                        width: Math.random() * 40 + 30,
-                        height: Math.random() * 40 + 30,
-                        color: `hsl(${Math.random() * 360}, 30%, 40%)`
-                    });
-                }
-                drawGtaWorld();
-            }
-
-            function drawGtaWorld() {
-                gtaCtx.clearRect(0, 0, gtaCanvas.width, gtaCanvas.height);
-                gtaCtx.fillStyle = '#333333'; // Road color
-                gtaCtx.fillRect(0, 0, gtaCanvas.width, gtaCanvas.height);
-
-                // Draw buildings
-                gtaBuildings.forEach(building => {
-                    gtaCtx.fillStyle = building.color;
-                    gtaCtx.fillRect(building.x, building.y, building.width, building.height);
-                    gtaCtx.strokeStyle = '#222';
-                    gtaCtx.lineWidth = 2;
-                    gtaCtx.strokeRect(building.x, building.y, building.width, building.height);
-                });
-
-                // Draw player car
-                gtaCtx.fillStyle = gtaPlayer.color;
-                gtaCtx.fillRect(gtaPlayer.x, gtaPlayer.y, gtaPlayer.width, gtaPlayer.height);
-                gtaCtx.strokeStyle = 'black';
-                gtaCtx.lineWidth = 1;
-                gtaCtx.strokeRect(gtaPlayer.x, gtaPlayer.y, gtaPlayer.width, gtaPlayer.height);
-            }
-
-            function updateGtaGame() {
-                if (!isGtaGameRunning) return;
-
-                // Update player movement based on keys pressed
-                gtaPlayer.vx = 0;
-                gtaPlayer.vy = 0;
-                if (gtaKeysPressed['ArrowLeft'] || gtaKeysPressed['q']) gtaPlayer.vx = -gtaPlayer.speed;
-                if (gtaKeysPressed['ArrowRight'] || gtaKeysPressed['d']) gtaPlayer.vx = gtaPlayer.speed;
-                if (gtaKeysPressed['ArrowUp'] || gtaKeysPressed['z']) gtaPlayer.vy = -gtaPlayer.speed;
-                if (gtaKeysPressed['ArrowDown'] || gtaKeysPressed['s']) gtaPlayer.vy = gtaPlayer.speed;
-
-                gtaPlayer.x += gtaPlayer.vx;
-                gtaPlayer.y += gtaPlayer.vy;
-
-                // Keep player within canvas bounds
-                gtaPlayer.x = Math.max(0, Math.min(gtaCanvas.width - gtaPlayer.width, gtaPlayer.x));
-                gtaPlayer.y = Math.max(0, Math.min(gtaCanvas.height - gtaPlayer.height, gtaPlayer.y));
-
-                drawGtaWorld();
-                gtaGameIntervalId = requestAnimationFrame(updateGtaGame);
-            }
-
-            function startGtaGame() {
-                if (isGtaGameRunning) return;
-                isGtaGameRunning = true;
-                gtaTimer = 0;
-                gtaTimerDisplay.textContent = gtaTimer;
-                gtaGameMessage.textContent = 'Conduisez !';
-                gtaStartButton.classList.add('disabled');
-                gtaStartButton.disabled = true;
-                gtaRestartButton.classList.remove('disabled');
-                gtaRestartButton.disabled = false;
-
-                // Reset player position
-                gtaPlayer.x = gtaCanvas.width / 2 - gtaPlayer.width / 2;
-                gtaPlayer.y = gtaCanvas.height / 2 - gtaPlayer.height / 2;
-
-                gtaGameIntervalId = requestAnimationFrame(updateGtaGame);
-                gtaTimerIntervalId = setInterval(() => {
-                    gtaTimer++;
-                    gtaTimerDisplay.textContent = gtaTimer;
-                }, 1000);
-            }
-
-            function endGtaGame(message) {
-                isGtaGameRunning = false;
-                cancelAnimationFrame(gtaGameIntervalId);
-                clearInterval(gtaTimerIntervalId);
-                gtaGameMessage.textContent = `Partie terminée ! ${message} Temps: ${gtaTimer}s`;
-                gtaStartButton.classList.remove('disabled');
-                gtaStartButton.disabled = false;
-            }
-
-            // GTA Keyboard Controls
-            document.addEventListener('keydown', (e) => {
-                if (miniGtaGameContainer.classList.contains('active') && isGtaGameRunning) {
-                    gtaKeysPressed[e.key] = true;
-                }
-            });
-
-            document.addEventListener('keyup', (e) => {
-                if (miniGtaGameContainer.classList.contains('active') && isGtaGameRunning) {
-                    gtaKeysPressed[e.key] = false;
-                }
-            });
-
-            // GTA Touch Controls (simplified swipe for movement)
-            let gtaTouchStartX = 0;
-            let gtaTouchStartY = 0;
-            gtaCanvas.addEventListener('touchstart', (e) => {
-                if (miniGtaGameContainer.classList.contains('active') && isGtaGameRunning) {
-                    gtaTouchStartX = e.touches[0].clientX;
-                    gtaTouchStartY = e.touches[0].clientY;
-                }
-            });
-            gtaCanvas.addEventListener('touchmove', (e) => {
-                if (miniGtaGameContainer.classList.contains('active') && isGtaGameRunning) {
-                    e.preventDefault();
-                    const touchCurrentX = e.touches[0].clientX;
-                    const touchCurrentY = e.touches[0].clientY;
-                    const deltaX = touchCurrentX - gtaTouchStartX;
-                    const deltaY = touchCurrentY - gtaTouchStartY;
-
-                    // Simple direct control based on touch delta
-                    gtaPlayer.x += deltaX * 0.5; // Adjust sensitivity
-                    gtaPlayer.y += deltaY * 0.5;
-
-                    // Keep player within canvas bounds
-                    gtaPlayer.x = Math.max(0, Math.min(gtaCanvas.width - gtaPlayer.width, gtaPlayer.x));
-                    gtaPlayer.y = Math.max(0, Math.min(gtaCanvas.height - gtaPlayer.height, gtaPlayer.y));
-
-                    gtaTouchStartX = touchCurrentX;
-                    gtaTouchStartY = touchCurrentY;
-                }
-            });
-
-            // GTA Button Listeners
-            if (gtaStartButton) gtaStartButton.addEventListener('click', startGtaGame);
-            if (gtaRestartButton) gtaRestartButton.addEventListener('click', initGtaGame);
-
-
             // --- Fonctions de gestion de l'interface utilisateur ---
-
-            // Fonction pour afficher une section spécifique et cacher les autres
             function showSection(targetId) {
-                stopAllGames(); // Arrête les jeux quand on change de section
+                stopAllGames();
                 contentSections.forEach(section => {
                     section.classList.remove('active');
                 });
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.classList.add('active');
-                    // Initialise le jeu approprié si la section mini-jeu est activée
                     if (targetId === 'mini-jeu') {
-                        // Par défaut, affiche le jeu "Évitez les Blocs !"
                         toggleGameView('evitez-blocs-game-container');
+                    } else if (targetId === 'alerte') {
+                        const alerteDate = document.getElementById('alerte-date');
+                        const now = new Date();
+                        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+                        alerteDate.textContent = `Date de la dernière mise à jour : ${now.toLocaleDateString('fr-FR', options)}`;
                     }
                 }
             }
 
-            // Fonction pour mettre à jour le lien de navigation actif
             function updateActiveNavLink(clickedLink) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
@@ -1646,63 +1132,39 @@
                 }
             }
 
-            // Écouteurs d'événements pour les liens de navigation
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
-                    const targetId = this.dataset.target; // Récupère l'ID de la section cible depuis l'attribut data-target
+                    const targetId = this.dataset.target;
                     showSection(targetId);
                     updateActiveNavLink(this);
-
-                    // Ferme le menu mobile après avoir cliqué sur un lien
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
                 });
             });
 
-            // Bascule le menu mobile
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Écouteurs pour les boutons de bascule de jeu
             document.getElementById('show-evitez-blocs-button').addEventListener('click', () => {
                 toggleGameView('evitez-blocs-game-container');
             });
             document.getElementById('show-police-game-button').addEventListener('click', () => {
                 toggleGameView('police-game-container');
             });
-            document.getElementById('show-gta-game-button').addEventListener('click', () => {
-                toggleGameView('mini-gta-game-container');
-            });
-            document.getElementById('show-cyclone-game-button').addEventListener('click', () => {
-                // Si le bouton Cyclone est désactivé, affiche un message d'erreur
-                if (showCycloneGameButton.classList.contains('disabled')) {
-                    alert("Suite à des erreurs, le jeu du Cyclone ne peut plus être remis.");
-                    return;
-                }
-                toggleGameView('cyclone-game-container');
-            });
 
-            // Gère le redimensionnement de la fenêtre pour les canvas des jeux
             window.addEventListener('resize', () => {
                 if (evitezBlocsGameContainer.classList.contains('active')) {
                     resizeGameCanvas(gameCanvas, gameCtx, 300, 400);
-                    drawEvitezBlocsWorld(); // Redessine le monde après redimensionnement
+                    drawEvitezBlocsWorld();
                 } else if (policeGameContainer.classList.contains('active')) {
                     resizeGameCanvas(policeCanvas, policeCtx, 400, 300);
-                    drawPoliceWorld(); // Redessine le monde policier
-                } else if (miniGtaGameContainer.classList.contains('active')) {
-                    resizeGameCanvas(gtaCanvas, gtaCtx, 500, 400);
-                    drawGtaWorld(); // Redessine le monde GTA
-                } else if (cycloneGameContainer.classList.contains('active')) {
-                    resizeGameCanvas(cycloneCanvas, cycloneCtx, 400, 400);
-                    drawCycloneWorld(); // Redessine le monde du cyclone
+                    drawPoliceWorld();
                 }
             });
 
-            // Affiche la section "Accueil" par défaut au chargement de la page
             showSection('accueil');
         });
     </script>
